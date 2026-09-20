@@ -78,7 +78,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
           </p>
 
           {/* Signal 4 — Single primary CTA. Orange is reserved here. */}
-          <div className="mt-10 flex flex-wrap items-center gap-3">
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-3 md:justify-start">
             <button
               onClick={onOpenBooking}
               className="inline-flex items-center gap-2 bg-brand-orange hover:bg-brand-orangeHover text-white font-semibold text-sm uppercase tracking-wider px-7 py-4 rounded-md transition-colors shadow-orange-glow"

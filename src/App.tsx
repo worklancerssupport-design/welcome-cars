@@ -11,7 +11,6 @@ import { OwnerSection } from "./components/OwnerSection";
 import { LocationSection } from "./components/LocationSection";
 import { FinalCTASection } from "./components/FinalCTASection";
 import { Footer } from "./components/Footer";
-import { MobileStickyBar } from "./components/MobileStickyBar";
 import { BookingModal } from "./components/BookingModal";
 
 const EditPage = lazy(() => import("./edit/EditPage"));
@@ -44,7 +43,6 @@ function HomePage() {
             </main>
 
             <Footer />
-            <MobileStickyBar onOpenBooking={() => handleOpenBooking()} />
 
             <BookingModal
                 isOpen={isBookingModalOpen}
