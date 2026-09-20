@@ -10,7 +10,6 @@ import { ProblemsSection } from "./components/ProblemsSection";
 import { WorkGallerySection } from "./components/WorkGallerySection";
 import { OwnerSection } from "./components/OwnerSection";
 import { LocationSection } from "./components/LocationSection";
-import { FinalCTASection } from "./components/FinalCTASection";
 import { Footer } from "./components/Footer";
 import { BookingModal } from "./components/BookingModal";
 
@@ -40,7 +39,6 @@ function HomePage() {
                 <WorkGallerySection />
                 <OwnerSection />
                 <LocationSection />
-                <FinalCTASection onOpenBooking={() => handleOpenBooking()} />
             </main>
 
             <Footer />

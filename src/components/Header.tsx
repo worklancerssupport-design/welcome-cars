@@ -105,29 +105,33 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking }) => {
 
         {/* Mobile Drawer */}
         {mobileMenuOpen && (
-          <div className="lg:hidden bg-white border-t border-slate-200 pb-6">
-            <div className="pt-4 pb-2 space-y-1">
+          <div className="lg:hidden">
+            <div className="px-4 sm:px-6 lg:px-8 py-4 space-y-1">
               {NAV_LINKS.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="block py-2.5 text-sm font-semibold tracking-wide uppercase text-brand-textDark hover:text-sky-600 transition-colors"
+                  className={`block py-2.5 text-xs font-semibold tracking-wide uppercase transition-colors ${
+                    isScrolled
+                      ? "text-slate-700 hover:text-sky-600"
+                      : "text-white/80 hover:text-white"
+                  }`}
                 >
                   {link.name}
                 </a>
               ))}
-            </div>
-            <div className="pt-4">
-              <button
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  onOpenBooking();
-                }}
-                className="w-full inline-flex items-center justify-center bg-brand-orange hover:bg-brand-orangeHover text-white font-semibold text-sm uppercase tracking-wider px-7 py-4 rounded-md transition-colors"
-              >
-                <span>Book A/C Service</span>
-              </button>
+              <div className="pt-3 flex justify-center">
+                <button
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    onOpenBooking();
+                  }}
+                  className="inline-flex items-center bg-brand-orange/90 hover:bg-brand-orange text-white font-medium text-xs uppercase tracking-wider px-4 py-2 rounded-md transition-colors"
+                >
+                  <span>Book A/C Service</span>
+                </button>
+              </div>
             </div>
           </div>
         )}
