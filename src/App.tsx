@@ -1,5 +1,6 @@
 ﻿import React, { useState, lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react";
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
 import { IntroSection } from "./components/IntroSection";
@@ -68,6 +69,7 @@ export const App: React.FC = () => {
                     }
                 />
             </Routes>
+            <Analytics />
         </BrowserRouter>
     );
 };
