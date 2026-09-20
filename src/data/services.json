@@ -1,0 +1,74 @@
+[
+  {
+    "id": "ac-diagnosis",
+    "number": "01",
+    "title": "A/C DIAGNOSIS",
+    "subtitle": "Pressure, thermal delta & electrical analysis",
+    "description": "Digital dual-gauge pressure scans and laser temperature delta measurement to accurately isolate why the cabin is not reaching target chill.",
+    "highlights": ["High & low side pressure test", "Vent delta temp probe", "Compressor electrical check"],
+    "tag": "Diagnostics"
+  },
+  {
+    "id": "cooling-problems",
+    "number": "02",
+    "title": "COOLING PROBLEM RESOLUTION",
+    "subtitle": "Intermittent or weak cooling diagnosis",
+    "description": "Resolving cabins that take too long to cool, cut out in traffic jams, or blow warm air during highway driving.",
+    "highlights": ["Condenser thermal exchange", "Evaporator de-ice sensor", "Blend door airflow check"],
+    "tag": "Cooling"
+  },
+  {
+    "id": "refrigerant-gas-service",
+    "number": "03",
+    "title": "A/C GAS / REFRIGERANT SERVICE",
+    "subtitle": "R134a & R1234yf vacuum recovery & recharge",
+    "description": "Automated evacuation of old refrigerant, deep moisture vacuum pull, and exact OEM gram-weight recharge with fresh PAG compressor oil.",
+    "highlights": ["Deep vacuum moisture pull", "OEM gram-weight recharge", "PAG compressor lubrication"],
+    "tag": "Refrigerant"
+  },
+  {
+    "id": "gas-leak-check",
+    "number": "04",
+    "title": "A/C LEAK DIAGNOSIS",
+    "subtitle": "Nitrogen pressure & electronic sniffing",
+    "description": "Systematic multi-stage leak pinpointing using 250+ PSI Oxygen-Free Nitrogen hydrostatic testing and electronic halogen sniffers.",
+    "highlights": ["250+ PSI Nitrogen hold test", "Electronic sniffer probe", "UV dye joint scanning"],
+    "tag": "Leak Check"
+  },
+  {
+    "id": "compressor-service",
+    "number": "05",
+    "title": "COMPRESSOR SERVICE & REPAIR",
+    "subtitle": "Clutch, control valve, bearing & seals",
+    "description": "Specialized servicing of the A/C compressor - magnetic clutch air-gap adjustment, internal displacement valve testing, and shaft seal refurbishment.",
+    "highlights": ["Clutch air-gap calibration", "Control valve testing", "Pulley bearing repair"],
+    "tag": "Mechanical"
+  },
+  {
+    "id": "ac-system-repair",
+    "number": "06",
+    "title": "A/C SYSTEM REPAIR & OVERHAUL",
+    "subtitle": "Condenser, evaporator & complete HVA/C lines",
+    "description": "End-to-end component replacement and closed-loop solvent chemical flushing after mechanical seizure to prevent recurring contamination.",
+    "highlights": ["Closed-loop solvent flush", "Condenser & coil replacement", "Post-service load validation"],
+    "tag": "Full Overhaul"
+  },
+  {
+    "id": "evaporator-service",
+    "number": "07",
+    "title": "EVAPORATOR COIL & CABIN AIR QUALITY",
+    "subtitle": "Under-dash coil sanitization and pollen filtration",
+    "description": "Deep chemical foam disinfection of the cooling coil, unclogging condensation drain pans, and replacing high-efficiency PM2.5 pollen filters.",
+    "highlights": ["Foam core sanitization", "Condensate drain clear", "PM2.5 pollen filtration"],
+    "tag": "Air Quality"
+  },
+  {
+    "id": "ac-electrical-scan",
+    "number": "08",
+    "title": "A/C ELECTRICAL & SENSOR DIAGNOSIS",
+    "subtitle": "Climate control sensors, blend actuators and relays",
+    "description": "Diagnostic scan of automotive climate ECU data, ambient/cabin thermistor testing, dual-action radiator fan relay and actuator motor checks.",
+    "highlights": ["HVA/C sensor live data", "Blend door motor calibration", "High/low pressure switches"],
+    "tag": "Electrical"
+  }
+]

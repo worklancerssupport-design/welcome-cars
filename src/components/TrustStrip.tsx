@@ -4,12 +4,12 @@ import { Snowflake, Activity, ShieldCheck, Gauge, Cpu } from "lucide-react";
 export const TrustStrip: React.FC = () => {
   const trustItems = [
     {
-      label: "CAR AC SPECIALIST",
-      sub: "100% HVAC Dedication",
+      label: "CAR A/C SPECIALIST",
+      sub: "100% HVA/C Dedication",
       icon: Snowflake
     },
     {
-      label: "AC DIAGNOSTICS",
+      label: "A/C DIAGNOSTICS",
       sub: "Dual Gauge & Scanners",
       icon: Activity
     },

@@ -1,6 +1,9 @@
 ﻿import React, { useState } from "react";
 import { X, Phone, MessageSquare, Wrench, ShieldCheck } from "lucide-react";
-import { BUSINESS_CONFIG, AC_SERVICES, AC_PROBLEMS } from "../config/business";
+import { AC_PROBLEMS } from "../config/business";
+import AC_SERVICES from "../data/services.json";
+import OWNER_DATA from "../data/owner.json";
+import { ServiceItem } from "../data/types";
 
 interface BookingModalProps {
   isOpen: boolean;
@@ -15,8 +18,9 @@ export const BookingModal: React.FC<BookingModalProps> = ({
   preselectedService = "",
   preselectedProblem = ""
 }) => {
+  const services = AC_SERVICES as ServiceItem[];
   const [carModel, setCarModel] = useState("");
-  const [selectedService, setSelectedService] = useState(preselectedService || AC_SERVICES[0].title);
+  const [selectedService, setSelectedService] = useState(preselectedService || services[0].title);
   const [selectedProblem, setSelectedProblem] = useState(preselectedProblem);
   const [preferredDate, setPreferredDate] = useState("");
   const [notes, setNotes] = useState("");
@@ -25,7 +29,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
 
   const handleWhatsAppSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const message = `Hello ${BUSINESS_CONFIG.businessName}, I would like to book a Car AC Inspection/Service.
+    const message = `Hello ${OWNER_DATA.businessName}, I would like to book a Car A/C Inspection/Service.
 Vehicle: ${carModel || "Not specified"}
 Service Required: ${selectedService}
 Observed Issue: ${selectedProblem || "General Checkup"}
@@ -33,7 +37,7 @@ Preferred Date: ${preferredDate || "Earliest available"}
 Additional Notes: ${notes || "None"}`;
 
     const encoded = encodeURIComponent(message);
-    window.open(`https://wa.me/${BUSINESS_CONFIG.whatsappNumber}?text=${encoded}`, "_blank");
+    window.open(`https://wa.me/${OWNER_DATA.whatsappNumber}?text=${encoded}`, "_blank");
     onClose();
   };
 
@@ -58,14 +62,14 @@ Additional Notes: ${notes || "None"}`;
 
         <div className="flex items-center space-x-2 text-[#FF6B35] text-xs font-mono tracking-wider uppercase mb-1.5 font-bold">
           <Wrench className="w-3.5 h-3.5" />
-          <span>WELCOME CAR AC SERVICE</span>
+          <span>WELCOME CAR A/C SERVICE</span>
         </div>
 
         <h2 id="booking-modal-title" className="text-2xl font-bold font-display text-[#111827] mb-1">
-          Book AC Diagnosis & Service
+          Book A/C Diagnosis & Service
         </h2>
         <p className="text-xs sm:text-sm text-[#64748B] mb-6">
-          Schedule an inspection with our AC specialists. We test system pressures, refrigerant levels, and electrical components.
+          Schedule an inspection with our A/C specialists. We test system pressures, refrigerant levels, and electrical components.
         </p>
 
         <form onSubmit={handleWhatsAppSubmit} className="space-y-4 text-xs">
@@ -93,7 +97,7 @@ Additional Notes: ${notes || "None"}`;
                 onChange={(e) => setSelectedService(e.target.value)}
                 className="w-full bg-[#F8FAFC] border border-[#E2E8F0] rounded-lg px-3 py-2.5 text-sm text-[#111827] focus:outline-none focus:border-[#FF6B35]"
               >
-                {AC_SERVICES.map((s) => (
+                {services.map((s) => (
                   <option key={s.id} value={s.title}>
                     {s.title}
                   </option>
@@ -155,11 +159,11 @@ Additional Notes: ${notes || "None"}`;
             </button>
 
             <a
-              href={`tel:${BUSINESS_CONFIG.phoneNumber}`}
+              href={`tel:${OWNER_DATA.phoneNumber}`}
               className="w-full flex items-center justify-center space-x-2 bg-[#F8FAFC] hover:bg-slate-100 text-[#111827] border border-[#E2E8F0] font-bold py-3 px-6 rounded-lg uppercase tracking-wider text-xs transition-colors"
             >
               <Phone className="w-4 h-4 text-[#FF6B35]" />
-              <span>Call Instead: {BUSINESS_CONFIG.phoneNumber}</span>
+              <span>Call Instead: {OWNER_DATA.phoneNumber}</span>
             </a>
           </div>
         </form>

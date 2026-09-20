@@ -1,6 +1,6 @@
 ﻿import React from "react";
 import { Phone, MessageSquare, Navigation, Calendar } from "lucide-react";
-import { BUSINESS_CONFIG } from "../config/business";
+import OWNER_DATA from "../data/owner.json";
 
 interface MobileStickyBarProps {
   onOpenBooking: () => void;
@@ -11,7 +11,7 @@ export const MobileStickyBar: React.FC<MobileStickyBarProps> = ({ onOpenBooking 
     <aside aria-label="Quick mobile contact actions" className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#0B0F19]/95 backdrop-blur-md border-t border-slate-800 px-3 py-2.5 shadow-2xl">
       <div className="grid grid-cols-4 gap-2">
         <a
-          href={`tel:${BUSINESS_CONFIG.phoneNumber}`}
+          href={`tel:${OWNER_DATA.phoneNumber}`}
           className="flex flex-col items-center justify-center py-2 px-1 bg-white/10 rounded-lg text-white active:bg-white/20 transition-colors"
         >
           <Phone className="w-4 h-4 text-[#FF6B35] mb-0.5" />
@@ -19,7 +19,7 @@ export const MobileStickyBar: React.FC<MobileStickyBarProps> = ({ onOpenBooking 
         </a>
 
         <a
-          href={`https://wa.me/${BUSINESS_CONFIG.whatsappNumber}`}
+          href={`https://wa.me/${OWNER_DATA.whatsappNumber}`}
           target="_blank"
           rel="noopener noreferrer"
           className="flex flex-col items-center justify-center py-2 px-1 bg-white/95 rounded-lg text-[#0F172A] font-bold active:bg-white transition-colors"
@@ -29,7 +29,7 @@ export const MobileStickyBar: React.FC<MobileStickyBarProps> = ({ onOpenBooking 
         </a>
 
         <a
-          href={BUSINESS_CONFIG.googleMapsUrl}
+          href={OWNER_DATA.googleMapsUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="flex flex-col items-center justify-center py-2 px-1 bg-white/10 rounded-lg text-white active:bg-white/20 transition-colors"
@@ -43,7 +43,7 @@ export const MobileStickyBar: React.FC<MobileStickyBarProps> = ({ onOpenBooking 
           className="flex flex-col items-center justify-center py-2 px-1 bg-[#FF6B35] rounded-lg text-white font-bold animate-orange-glow active:bg-[#E55A27] transition-colors"
         >
           <Calendar className="w-4 h-4 mb-0.5" />
-          <span className="text-[10px] uppercase tracking-wider font-bold">Book AC</span>
+          <span className="text-[10px] uppercase tracking-wider font-bold">Book A/C </span>
         </button>
       </div>
     </aside>

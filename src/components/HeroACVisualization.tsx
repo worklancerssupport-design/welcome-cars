@@ -12,11 +12,11 @@ interface ComponentNode {
 }
 
 const NODES: ComponentNode[] = [
-  { id: "compressor", name: "COMPRESSOR", stage: "High-Pressure Gas Pump", temp: "75°C - 85°C", pressure: "180 - 230 PSI", color: "#f97316", x: 180, y: 220 },
-  { id: "condenser", name: "CONDENSER", stage: "Heat Dissipation Unit", temp: "45°C - 55°C", pressure: "175 - 220 PSI", color: "#eab308", x: 100, y: 110 },
-  { id: "expansion", name: "EXPANSION VALVE", stage: "Pressure Metering Orifice", temp: "2°C - 5°C", pressure: "28 - 35 PSI", color: "#06b6d4", x: 360, y: 110 },
-  { id: "evaporator", name: "EVAPORATOR", stage: "Cabin Heat Exchanger", temp: "1°C - 4°C", pressure: "25 - 32 PSI", color: "#00f0ff", x: 470, y: 190 },
-  { id: "cabin", name: "CABIN VENTS", stage: "Cold Air Discharge", temp: "4°C - 8°C (Ideal)", pressure: "Atmospheric", color: "#38bdf8", x: 570, y: 250 },
+  { id: "compressor", name: "COMPRESSOR", stage: "High-Pressure Gas Pump", temp: "75ï¿½C - 85ï¿½C", pressure: "180 - 230 PSI", color: "#f97316", x: 180, y: 220 },
+  { id: "condenser", name: "CONDENSER", stage: "Heat Dissipation Unit", temp: "45ï¿½C - 55ï¿½C", pressure: "175 - 220 PSI", color: "#eab308", x: 100, y: 110 },
+  { id: "expansion", name: "EXPANSION VALVE", stage: "Pressure Metering Orifice", temp: "2ï¿½C - 5ï¿½C", pressure: "28 - 35 PSI", color: "#06b6d4", x: 360, y: 110 },
+  { id: "evaporator", name: "EVAPORATOR", stage: "Cabin Heat Exchanger", temp: "1ï¿½C - 4ï¿½C", pressure: "25 - 32 PSI", color: "#00f0ff", x: 470, y: 190 },
+  { id: "cabin", name: "CABIN VENTS", stage: "Cold Air Discharge", temp: "4ï¿½C - 8ï¿½C (Ideal)", pressure: "Atmospheric", color: "#38bdf8", x: 570, y: 250 },
 ];
 
 export const HeroACVisualization: React.FC = () => {
@@ -207,7 +207,7 @@ export const HeroACVisualization: React.FC = () => {
             <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-cyan-500"></span>
           </span>
           <span className="font-mono text-cyan-400 font-semibold tracking-wider uppercase text-[11px]">
-            THERMODYNAMIC CAR AC CYCLE • ACTIVE
+            THERMODYNAMIC CAR A/C CYCLE ï¿½ ACTIVE
           </span>
         </div>
         <div className="hidden sm:flex items-center space-x-3 text-[11px] font-mono text-slate-400">

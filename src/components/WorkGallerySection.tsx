@@ -1,216 +1,166 @@
 ﻿import React, { useState } from "react";
-import { WORK_CASES, WorkCaseItem } from "../config/business";
-import { ArrowRight, Car, ShieldCheck } from "lucide-react";
+import WORK_CASES from "../data/caseStudies.json";
+import { WorkCaseItem } from "../data/types";
+import { Car, ShieldCheck } from "lucide-react";
 
 export const WorkGallerySection: React.FC = () => {
-  const [selectedCaseId, setSelectedCaseId] = useState<string>(WORK_CASES[0].id);
+  const cases = WORK_CASES as WorkCaseItem[];
+  const [selectedCaseId, setSelectedCaseId] = useState<string>(cases[0].id);
 
-  const activeCase = WORK_CASES.find((c) => c.id === selectedCaseId) || WORK_CASES[0];
+  const activeCase = cases.find((c) => c.id === selectedCaseId) || cases[0];
 
   return (
-    <section id="work" className="py-24 md:py-32 bg-[#0B1120] text-white border-b border-slate-800 relative overflow-hidden">
-      {/* Background ambient lighting */}
-      <div className="absolute top-1/3 -left-20 w-80 h-80 bg-[#FF6B35]/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-10 right-10 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl pointer-events-none" />
+    <section id="work" className="py-24 md:py-32 bg-brand-obsidian text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
-        {/* Section Header */}
-        <div className="max-w-2xl mb-16 text-left">
-          <div className="inline-flex items-center space-x-2 text-xs font-bold tracking-[0.2em] text-[#FF6B35] uppercase mb-3 bg-[#FF6B35]/10 border border-[#FF6B35]/25 px-3.5 py-1 rounded-full">
-            <span className="w-2 h-2 rounded-full bg-[#FF6B35]" />
-            <span>DOCUMENTED WORKSHOP BENCHMARKS</span>
-          </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-display text-white tracking-tight">
-            OUR WORK
+        {/* Header */}
+        <div className="max-w-2xl mb-12">
+          <p className="text-xs font-semibold tracking-[0.18em] uppercase text-sky-400/80 mb-5">
+            Documented Benchmarks
+          </p>
+          <h2 className="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-[1.08] tracking-tight">
+            Real cars. Real numbers.
           </h2>
-          <p className="mt-3 text-base sm:text-lg text-slate-400 leading-relaxed">
-            Real vehicles, real air-conditioning diagnostics, and verified discharge temperature deltas.
+          <p className="mt-6 text-base sm:text-lg text-white/60 leading-relaxed">
+            Four case studies from the workshop bay — measured vent discharge
+            temperatures, service duration, and the validated result.
           </p>
         </div>
 
-        {/* Automotive Case-Study Layout: 60% Featured Case on Left + Interactive Numbered Rows on Right */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
-          
-          {/* Left: 60% Featured Case Study Card on Carbon */}
-          <div className="lg:col-span-7 bg-[#0F172A] border border-slate-700/80 rounded-2xl p-6 sm:p-9 shadow-2xl relative overflow-hidden">
-            {/* Top Bar */}
-            <div className="flex flex-wrap items-center justify-between gap-3 pb-5 border-b border-slate-800">
-              <div className="inline-flex items-center space-x-2 bg-black/60 border border-slate-700 text-white px-3.5 py-1.5 rounded-lg text-xs font-mono font-bold uppercase tracking-wider">
-                <span className="w-2 h-2 rounded-full bg-[#FF6B35] animate-pulse" />
-                <span>FEATURED CASE STUDY</span>
-              </div>
-              <span className="text-xs font-mono font-bold text-[#FF6B35] bg-[#FF6B35]/15 border border-[#FF6B35]/30 px-3 py-1 rounded-full">
-                CASE {activeCase.number} • {activeCase.category.toUpperCase()}
-              </span>
-            </div>
-
-            {/* Vehicle & Title */}
-            <div className="mt-6 space-y-2">
-              <div className="flex items-center space-x-2 text-xs font-mono font-bold uppercase tracking-wider text-[#FF6B35]">
-                <Car className="w-4 h-4" />
-                <span>{activeCase.vehicle}</span>
-              </div>
-              <h3 className="text-2xl sm:text-3xl font-extrabold font-display text-white tracking-tight">
-                {activeCase.title}
-              </h3>
-            </div>
-
-            {/* Thermal Stats Display with Rich Contrast */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3.5 my-6">
-              <div className="p-4 rounded-xl bg-[#1E293B] border border-slate-700/80 text-center">
-                <span className="text-[10px] font-mono uppercase text-slate-400 block font-bold">Initial Temp</span>
-                <span className="text-xl font-mono font-extrabold text-amber-500 block mt-1">
-                  {activeCase.stats.initialTemp}
-                </span>
-                <span className="text-[10px] text-amber-400/80 font-medium">Warm Cabin</span>
-              </div>
-
-              <div className="p-4 rounded-xl bg-[#1E293B] border border-sky-500/40 text-center relative overflow-hidden ring-1 ring-sky-500/30">
-                <div className="absolute top-0 right-0 w-8 h-8 bg-sky-500/10 rounded-bl-xl" />
-                <span className="text-[10px] font-mono uppercase text-slate-300 block font-bold">Final Temp</span>
-                <span className="text-xl font-mono font-extrabold text-sky-400 block mt-1">
-                  {activeCase.stats.finalTemp}
-                </span>
-                <span className="text-[10px] text-sky-300 font-semibold">Ice Chill</span>
-              </div>
-
-              <div className="p-4 rounded-xl bg-[#1E293B] border border-slate-700/80 text-center">
-                <span className="text-[10px] font-mono uppercase text-slate-400 block font-bold">Service Time</span>
-                <span className="text-lg font-mono font-extrabold text-white block mt-1">
-                  {activeCase.stats.duration}
-                </span>
-                <span className="text-[10px] text-slate-400">Completed</span>
-              </div>
-
-              <div className="p-4 rounded-xl bg-[#1E293B] border border-slate-700/80 text-center">
-                <span className="text-[10px] font-mono uppercase text-slate-400 block font-bold">Delta Result</span>
-                <span className="text-sm font-mono font-extrabold text-[#FF6B35] block mt-1 truncate">
-                  {activeCase.stats.pressureDelta}
-                </span>
-                <span className="text-[10px] text-slate-400">Validated</span>
-              </div>
-            </div>
-
-            {/* Documented Breakdown */}
-            <div className="space-y-4 pt-1">
-              <div className="p-4 rounded-xl bg-[#1E293B] border border-slate-700/70 space-y-1">
-                <span className="text-[11px] font-mono uppercase font-bold text-[#FF6B35] block">
-                  REPORTED COMPLAINT & SYMPTOMS:
-                </span>
-                <p className="text-xs sm:text-sm text-slate-200 leading-relaxed">
-                  {activeCase.issue}
-                </p>
-              </div>
-
-              <div className="p-4 rounded-xl bg-[#1E293B] border border-slate-700/70 space-y-1">
-                <span className="text-[11px] font-mono uppercase font-bold text-slate-300 block">
-                  SPECIALIST DIAGNOSTIC FINDINGS:
-                </span>
-                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                  {activeCase.diagnostic}
-                </p>
-              </div>
-
-              <div className="p-4 rounded-xl bg-black/50 border border-slate-800 space-y-1">
-                <span className="text-[11px] font-mono uppercase font-bold text-[#FF6B35] block">
-                  TECHNICAL SOLUTION EXECUTED:
-                </span>
-                <p className="text-xs sm:text-sm text-slate-200 leading-relaxed font-medium">
-                  {activeCase.solution}
-                </p>
-              </div>
-            </div>
-
-            {/* Outcome Strip */}
-            <div className="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between text-xs">
-              <div className="flex items-center space-x-2 text-slate-300 font-semibold">
-                <ShieldCheck className="w-4 h-4 text-[#FF6B35]" />
-                <span>{activeCase.summary}</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Right: Interactive Case Rows with High-Contrast Carbon Cards */}
-          <div className="lg:col-span-5 space-y-3.5">
-            <div className="pb-2 border-b border-slate-800 flex items-center justify-between">
-              <span className="text-xs font-mono font-bold uppercase tracking-wider text-slate-300">
-                SELECT CASE STUDY ARCHIVE
-              </span>
-              <span className="text-xs text-slate-500 font-mono">
-                CLICK TO PREVIEW
-              </span>
-            </div>
-
-            {WORK_CASES.map((item: WorkCaseItem) => {
+        {/* Case selector — compact, sticky on desktop so it stays accessible while reading the featured card below */}
+        <div className="lg:sticky lg:top-20 z-10 bg-brand-obsidian pb-5 mb-8 border-b border-white/5">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+            {cases.map((item: WorkCaseItem) => {
               const isSelected = item.id === selectedCaseId;
               return (
-                <div
+                <button
                   key={item.id}
                   onClick={() => setSelectedCaseId(item.id)}
-                  className={`group p-5 rounded-xl cursor-pointer border transition-all duration-200 flex items-center justify-between ${
+                  className={`text-left p-4 rounded-xl border-l-2 transition-colors ${
                     isSelected
-                      ? "bg-[#1E293B] text-white border-l-4 border-l-[#FF6B35] border-slate-700 shadow-xl ring-1 ring-[#FF6B35]/30"
-                      : "bg-[#0F172A] hover:bg-[#1E293B]/70 text-slate-300 border-slate-800 hover:border-slate-700"
+                      ? "bg-white/[0.06] border-l-sky-400"
+                      : "border-l-transparent border border-white/10 hover:bg-white/[0.03]"
                   }`}
                 >
-                  <div className="space-y-1.5 pr-3">
-                    <div className="flex items-center space-x-3">
-                      <span
-                        className={`text-sm font-mono font-bold ${
-                          isSelected ? "text-[#FF6B35]" : "text-slate-500 group-hover:text-[#FF6B35]"
-                        }`}
-                      >
-                        {item.number}
-                      </span>
-                      <span
-                        className={`text-xs font-bold uppercase tracking-wider font-mono ${
-                          isSelected ? "text-[#FF6B35]" : "text-slate-400"
-                        }`}
-                      >
-                        {item.vehicle}
-                      </span>
-                    </div>
-
-                    <h4
-                      className={`text-sm sm:text-base font-bold font-display ${
-                        isSelected ? "text-white" : "text-slate-200"
-                      }`}
-                    >
-                      {item.title}
-                    </h4>
-
-                    <p
-                      className={`text-xs line-clamp-1 ${
-                        isSelected ? "text-slate-300" : "text-slate-500"
-                      }`}
-                    >
-                      {item.issue}
-                    </p>
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className={`text-sm font-semibold tabular-nums ${isSelected ? "text-sky-400" : "text-white/40"}`}>
+                      {item.number}
+                    </span>
+                    <span className={`text-[10px] font-semibold tracking-[0.18em] uppercase truncate ${isSelected ? "text-sky-300/80" : "text-white/40"}`}>
+                      {item.category}
+                    </span>
                   </div>
-
-                  <div className="flex items-center pl-2">
-                    <div
-                      className={`w-9 h-9 rounded-lg flex items-center justify-center transition-transform duration-200 group-hover:translate-x-1.5 ${
-                        isSelected
-                          ? "bg-[#FF6B35] text-white"
-                          : "bg-slate-800 text-[#FF6B35] group-hover:bg-[#FF6B35] group-hover:text-white"
-                      }`}
-                    >
-                      <ArrowRight className="w-4 h-4" />
-                    </div>
-                  </div>
-                </div>
+                  <p className={`text-[11px] font-medium tracking-[0.12em] uppercase mb-1.5 truncate ${isSelected ? "text-white/70" : "text-white/45"}`}>
+                    {item.vehicle}
+                  </p>
+                  <h4 className={`font-display text-sm font-semibold leading-snug ${isSelected ? "text-white" : "text-white/70"}`}>
+                    {item.title}
+                  </h4>
+                </button>
               );
             })}
+          </div>
+        </div>
 
-            {/* Specialization Assurance Badge */}
-            <div className="p-4 rounded-xl bg-[#0F172A] border border-slate-800 text-xs text-slate-400 flex items-center space-x-3 mt-4">
-              <div className="w-2 h-2 rounded-full bg-[#FF6B35] flex-shrink-0" />
-              <span>All case studies performed exclusively on dedicated automotive HVAC service bays.</span>
+        {/* Featured case study — full width, dominant content */}
+        <div className="bg-brand-slateDark border border-white/10 rounded-2xl p-6 sm:p-8 lg:p-10">
+
+          <div className="flex flex-wrap items-center gap-3 pb-5 mb-6 border-b border-white/10">
+            <span className="text-xs font-semibold tracking-[0.18em] uppercase text-white/50">
+              Case {activeCase.number}
+            </span>
+            <span className="text-xs font-medium text-white/30">·</span>
+            <span className="text-xs font-medium tracking-[0.18em] uppercase text-sky-400/80">
+              {activeCase.category}
+            </span>
+          </div>
+
+          <div className="flex items-center gap-2 text-sm font-medium text-white/70 mb-3">
+            <Car className="w-4 h-4" />
+            <span>{activeCase.vehicle}</span>
+          </div>
+
+          <h3 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-white leading-tight max-w-3xl">
+            {activeCase.title}
+          </h3>
+
+          {/* Stats grid */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-7">
+            <div className="p-4 rounded-xl bg-white/[0.04] border border-white/10">
+              <p className="text-[10px] font-semibold tracking-[0.18em] uppercase text-white/40">
+                Initial Temp
+              </p>
+              <p className="mt-2 font-display text-xl sm:text-2xl font-bold text-white/85 tabular-nums">
+                {activeCase.stats.initialTemp}
+              </p>
+              <p className="mt-1 text-xs text-white/40">Warm cabin</p>
+            </div>
+
+            <div className="p-4 rounded-xl bg-sky-500/[0.08] border border-sky-400/30">
+              <p className="text-[10px] font-semibold tracking-[0.18em] uppercase text-sky-300/80">
+                Final Temp
+              </p>
+              <p className="mt-2 font-display text-xl sm:text-2xl font-bold text-sky-300 tabular-nums">
+                {activeCase.stats.finalTemp}
+              </p>
+              <p className="mt-1 text-xs text-sky-300/70">Ice chill</p>
+            </div>
+
+            <div className="p-4 rounded-xl bg-white/[0.04] border border-white/10">
+              <p className="text-[10px] font-semibold tracking-[0.18em] uppercase text-white/40">
+                Service Time
+              </p>
+              <p className="mt-2 font-display text-lg sm:text-xl font-bold text-white/85 tabular-nums">
+                {activeCase.stats.duration}
+              </p>
+              <p className="mt-1 text-xs text-white/40">Completed</p>
+            </div>
+
+            <div className="p-4 rounded-xl bg-white/[0.04] border border-white/10">
+              <p className="text-[10px] font-semibold tracking-[0.18em] uppercase text-white/40">
+                Delta Result
+              </p>
+              <p className="mt-2 font-display text-base sm:text-lg font-bold text-white/85 tabular-nums leading-tight">
+                {activeCase.stats.pressureDelta}
+              </p>
+              <p className="mt-1 text-xs text-white/40">Validated</p>
             </div>
           </div>
 
+          {/* Narrative breakdown */}
+          <div className="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-4">
+            <div className="p-5 rounded-xl bg-white/[0.03] border border-white/10">
+              <p className="text-[10px] font-semibold tracking-[0.18em] uppercase text-white/50 mb-2">
+                Reported Symptoms
+              </p>
+              <p className="text-sm text-white/75 leading-relaxed">
+                {activeCase.issue}
+              </p>
+            </div>
+
+            <div className="p-5 rounded-xl bg-white/[0.03] border border-white/10">
+              <p className="text-[10px] font-semibold tracking-[0.18em] uppercase text-white/50 mb-2">
+                Diagnostic Findings
+              </p>
+              <p className="text-sm text-white/75 leading-relaxed">
+                {activeCase.diagnostic}
+              </p>
+            </div>
+
+            <div className="p-5 rounded-xl bg-white/[0.03] border border-white/10">
+              <p className="text-[10px] font-semibold tracking-[0.18em] uppercase text-white/50 mb-2">
+                Technical Solution
+              </p>
+              <p className="text-sm text-white/85 leading-relaxed">
+                {activeCase.solution}
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-7 pt-5 border-t border-white/10 flex items-start gap-3 text-sm text-white/65">
+            <ShieldCheck className="w-4 h-4 text-sky-400/80 flex-shrink-0 mt-0.5" />
+            <span className="leading-relaxed">{activeCase.summary}</span>
+          </div>
         </div>
 
       </div>

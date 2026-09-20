@@ -1,0 +1,70 @@
+[
+  {
+    "id": "case-01",
+    "number": "01",
+    "title": "CAR A/C COOLING RESTORATION",
+    "vehicle": "HONDA CITY i-VTEC",
+    "category": "Cooling Restoration",
+    "issue": "Vent discharge lukewarm at 22°C on hot afternoons; compressor clutch disengaging erratically in traffic.",
+    "diagnostic": "Dual-manifold gauges showed high head pressure (320 PSI) due to condenser fin contamination combined with slipped magnetic clutch air-gap.",
+    "solution": "Precision ultrasonic condenser cleaning, magnetic clutch shim recalibration to 0.45mm OEM spec, deep nitrogen vacuum & R134a precision recharge.",
+    "stats": {
+      "initialTemp": "22.0°C",
+      "finalTemp": "4.5°C",
+      "duration": "3.5 Hours",
+      "pressureDelta": "145 PSI Drop"
+    },
+    "summary": "Restored ice-cold 4.5°C cabin delivery with whisper-quiet clutch engagement and balanced high/low pressures under highway and idle loads."
+  },
+  {
+    "id": "case-02",
+    "number": "02",
+    "title": "A/C GAS & LEAK CHECK",
+    "vehicle": "HYUNDAI CRETA 1.6 CRDi",
+    "category": "Leak Diagnosis",
+    "issue": "Refrigerant emptied twice within 2 months following quick top-ups at non-specialist garages.",
+    "diagnostic": "280 PSI Oxygen-Free Nitrogen hold test combined with electronic halogen sniffing detected a micro-fracture at the lower condenser header tank weld.",
+    "solution": "Replaced damaged condenser with OEM spec unit, renewed HNBR rubber O-rings, 45-minute deep moisture vacuum evacuation, and exact 480g R134a recharge with PAG-46 oil.",
+    "stats": {
+      "initialTemp": "26.5°C",
+      "finalTemp": "5.0°C",
+      "duration": "2.5 Hours",
+      "pressureDelta": "0 PSI Leakage"
+    },
+    "summary": "Guaranteed leak-free closed loop backed by 24h pressure retention test; immediate frost formation at center dash vents."
+  },
+  {
+    "id": "case-03",
+    "number": "03",
+    "title": "COMPRESSOR SERVICE",
+    "vehicle": "TOYOTA INNOVA CRYSTA",
+    "category": "Compressor Overhaul",
+    "issue": "Severe metallic grinding noise upon pressing A/C button; engine RPM bogging down under A/C load.",
+    "diagnostic": "Seized double-row pulley idler bearing and glazed magnetic clutch friction plate; internal displacement control valve functioning normally.",
+    "solution": "Bench-serviced compressor assembly: pressed in new Japanese high-speed NSK pulley bearing, resurfaced clutch drive plate, set air gap, and renewed shaft nose seal.",
+    "stats": {
+      "initialTemp": "19.5°C",
+      "finalTemp": "4.8°C",
+      "duration": "4.0 Hours",
+      "pressureDelta": "Zero Bearing Play"
+    },
+    "summary": "Saved owner from expensive full compressor replacement; eliminated 100% of engine bay noise with seamless A/C engagement."
+  },
+  {
+    "id": "case-04",
+    "number": "04",
+    "title": "CONDENSER CLEANING & FLUSH",
+    "vehicle": "VOLKSWAGEN POLO GT TSI",
+    "category": "Thermal Performance",
+    "issue": "A/C cooling cuts out after 15 minutes of slow city driving; cooling resumes only when cruising at high speed.",
+    "diagnostic": "Severe mud and insect debris blinding the lower 60% of condenser micro-channels, causing high-pressure transducer cutoff in traffic.",
+    "solution": "Removed front grille for closed chemical foam descaling of condenser fins, radiator separation flush, and high-pressure sensor calibration.",
+    "stats": {
+      "initialTemp": "24.0°C",
+      "finalTemp": "5.2°C",
+      "duration": "2.0 Hours",
+      "pressureDelta": "Head Temp -18°C"
+    },
+    "summary": "Unrestricted ram-air heat dissipation; steady continuous cooling during peak traffic congestion."
+  }
+]
