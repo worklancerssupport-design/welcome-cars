@@ -1,35 +1,35 @@
 {
-  "businessName": "WELCOME CAR A/C SERVICE",
-  "ownerName": "Mani",
-  "yearsOfExperience": "15+ Years",
-  "designation": "Founder",
-  "location": "Tharamani, Chennai",
-  "sectionEyebrow": "The Person Behind the Work",
-  "quote": [
-    "Car A/C is a specialized trade.",
-    "We treat it like one."
-  ],
-  "bio": [
-    "After a decade inside multi-brand workshops in Chennai, Mani saw the same A/C problems return week after week — never properly diagnosed, only topped up.",
-    "Welcome Car A/C Service was built on a different rule: every vehicle is personally inspected before any work is quoted, and the root cause is what gets repaired."
-  ],
-  "ctaLabel": "Call Mani Directly",
-  "phoneNumber": "9884465741",
-  "whatsappNumber": "919884465741",
-  "fullAddress": "Old No: 58, New No: 55, Anna Nagar Colony (100Feet Road), Near SRP Tools, Tharamani, Chennai, Tamil Nadu 600041",
-  "area": "Tharamani",
-  "city": "Chennai",
-  "state": "Tamil Nadu",
-  "pincode": "600041",
-  "landmark": "Near SRP Tools (100Feet Road)",
-  "googleMapsUrl": "https://maps.app.goo.gl/V8pF9dmgpmtLqANr7",
-  "googleMapsEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d684.1138397677572!2d80.249077430425!3d12.981016428177139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d667026f1d5%3A0x6c35c476c21b89fc!2sWelcome%20Car%20a%2Fc%20Service!5e0!3m2!1sen!2sin!4v1789882596224!5m2!1sen!2sin",
-  "workingHours": "9:00 AM – 8:30 PM",
-  "workingDays": "Monday – Saturday",
-  "locationSection": {
-    "eyebrow": "Tharamani, Chennai Workshop",
-    "title": "Visit Welcome Car A/C Service.",
-    "description": "Drive-in A/C diagnostic bays on 100 Feet Road, near SRP Tools in Tharamani, Chennai.",
-    "ctaLabel": "Get Directions"
-  }
+    "businessName": "WELCOME CAR A/C SERVICE",
+    "ownerName": "Rajesh",
+    "yearsOfExperience": "15+ Years",
+    "designation": "Founder",
+    "location": "Tharamani, Chennai",
+    "sectionEyebrow": "The Person Behind the Work",
+    "quote": [
+        "Car A/C is a specialized trade.",
+        "We treat it like one."
+    ],
+    "bio": [
+        "After a decade inside multi-brand workshops in Chennai, Mani saw the same A/C problems return week after week — never properly diagnosed, only topped up.",
+        "Welcome Car A/C Service was built on a different rule: every vehicle is personally inspected before any work is quoted, and the root cause is what gets repaired."
+    ],
+    "ctaLabel": "Call Mani Directly",
+    "phoneNumber": "9884465741",
+    "whatsappNumber": "919884465741",
+    "fullAddress": "Old No: 58, New No: 55, Anna Nagar Colony (100Feet Road), Near SRP Tools, Tharamani, Chennai, Tamil Nadu 600041",
+    "area": "Tharamani",
+    "city": "Chennai",
+    "state": "Tamil Nadu",
+    "pincode": "600041",
+    "landmark": "Near SRP Tools (100Feet Road)",
+    "googleMapsUrl": "https://maps.app.goo.gl/V8pF9dmgpmtLqANr7",
+    "googleMapsEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d684.1138397677572!2d80.249077430425!3d12.981016428177139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d667026f1d5%3A0x6c35c476c21b89fc!2sWelcome%20Car%20a%2Fc%20Service!5e0!3m2!1sen!2sin!4v1789882596224!5m2!1sen!2sin",
+    "workingHours": "9:00 AM – 8:30 PM",
+    "workingDays": "Monday – Saturday",
+    "locationSection": {
+        "eyebrow": "Tharamani, Chennai Workshop",
+        "title": "Visit Welcome Car A/C Service.",
+        "description": "Drive-in A/C diagnostic bays on 100 Feet Road, near SRP Tools in Tharamani, Chennai.",
+        "ctaLabel": "Get Directions"
+    }
 }
