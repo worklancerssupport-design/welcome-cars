@@ -66,22 +66,5 @@
             "pressureDelta": "Head Temp -18°C"
         },
         "summary": "Unrestricted ram-air heat dissipation; steady continuous cooling during peak traffic congestion."
-    },
-    {
-        "id": "case-05",
-        "number": "05",
-        "title": "AC ORING CHANGE",
-        "vehicle": "Swift Desire",
-        "category": "Category",
-        "issue": "Engine Rebore",
-        "diagnostic": "Diagnostic findings.",
-        "solution": "Engine Rebore",
-        "stats": {
-            "initialTemp": "0.0°C",
-            "finalTemp": "0.0°C",
-            "duration": "0 Hours",
-            "pressureDelta": "—"
-        },
-        "summary": "Outcome summary."
     }
 ]
